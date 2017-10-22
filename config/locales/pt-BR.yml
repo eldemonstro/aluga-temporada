@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+      models:
+        property: "Propriedade"
+      attributes:
+        property:
+          title: "Título"
+          location_id: "Localização"
+          area: "Área (m²)"
+          property_type_id: "Tipo de propriedade"
+          rooms: "Quartos"
+          maximum_occupancy: "Ocupação maxima"
+          minimum_rent_days: "Dias mínimos para alugar"
+          maximum_rent_days: "Dias máximos para alugar"
+          daily_rate: "Valor padrão para a díaria"
+          description: "Descrição"
+          usage_rules: "Regras de uso"

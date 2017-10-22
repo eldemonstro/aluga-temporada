@@ -1,0 +1,26 @@
+<%= form_for(@property) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :location_id %>
+  <%= f.collection_select(:location_id, @locations, :id, :city_with_state) %>
+  <%= f.label :area %>
+  <%= f.number_field :area %>
+  <%= f.label :property_type_id %>
+  <%= f.collection_select(:property_type_id, @property_types, :id, :title) %>
+  <%= f.label :rooms %>
+  <%= f.number_field :rooms %>
+  <%= f.label :maximum_occupancy %>
+  <%= f.number_field :maximum_occupancy %>
+  <%= f.label :maximum_rent_days %>
+  <%= f.number_field :maximum_rent_days %>
+  <%= f.label :minimum_rent_days %>
+  <%= f.number_field :minimum_rent_days %>
+  <%= f.label :daily_rate %>
+  <%= f.number_field :daily_rate %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.label :usage_rules %>
+  <%= f.text_area :usage_rules %>
+
+  <%= f.submit %>
+<% end %>
