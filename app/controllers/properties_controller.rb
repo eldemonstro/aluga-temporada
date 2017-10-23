@@ -6,13 +6,18 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    property = Property.create(property_params)
-    redirect_to property_path property
+    @property = Property.new(property_params)
+    if @property.save
+      redirect_to property_path @property
+    else
+      @locations = Location.all
+      @property_types = PropertyType.all
+      render :new
+    end
   end
 
   def show
     @property = Property.find(params[:id])
-    puts @property.minimum_rent_days
   end
 
   private
