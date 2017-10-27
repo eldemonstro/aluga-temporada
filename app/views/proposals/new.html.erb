@@ -1,4 +1,16 @@
+<h1>Enviar uma proposta para <%= @property.title %></h1>
+
+<% if @proposal.errors.any? %>
+  <% @proposal.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
 <%= form_for([@property, @proposal]) do |f| %>
+  <legend>Formulário para enviar uma proposta</legend>
   <div class="form-group">
     <%= f.label :user_name %>
     <%= f.text_field :user_name, class: 'form-control' %>

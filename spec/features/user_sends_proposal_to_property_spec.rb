@@ -34,4 +34,22 @@ feature 'User sends proposal to property' do
     expect(page).to have_css('dd', text: 'Férias com a família')
     expect(page).to have_css('dd', text: 'R$ 800,00')
   end
+
+  scenario 'and must fill required fields' do
+    visit root_path
+    click_on @property.title
+    click_on 'Enviar Proposta'
+
+    fill_in 'Nome', with: ''
+    fill_in 'Email', with: ''
+    fill_in 'Data de início', with: ''
+    fill_in 'Data de fim', with: ''
+    fill_in 'Quantidade de pessoas', with: ''
+    fill_in 'Propósito da locação', with: ''
+    check 'Aceito as regras'
+    click_on 'Enviar Proposta'
+
+    expect(page).to have_css('div.alert.alert-danger',
+                             text: 'não pode ficar em branco')
+  end
 end

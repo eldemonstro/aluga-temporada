@@ -6,8 +6,12 @@ class ProposalsController < ApplicationController
 
   def create
     @property = Property.find(params[:property_id])
-    @proposal = @property.proposals.create(proposal_params)
-    redirect_to proposal_path @proposal
+    @proposal = @property.proposals.new(proposal_params)
+    if @proposal.save
+      redirect_to proposal_path @proposal
+    else
+      render :new 
+    end
   end
 
   def show

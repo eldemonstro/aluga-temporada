@@ -3,6 +3,9 @@ class Proposal < ApplicationRecord
 
   before_save :calculate_total_amount
 
+  validates :user_name, :email, :start_date, :end_date, :purpose,
+            :total_guests, presence: true
+
   private
 
   def calculate_total_amount
