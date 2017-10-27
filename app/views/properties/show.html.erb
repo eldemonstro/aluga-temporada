@@ -1,15 +1,5 @@
-<h1><%= @property.title %></h1>
-<p class="lead"><%= @property.description %></p>
-<dl>
-  <dt>Localização</dt> <dd><%= @property.location.city_with_state %></dd>
-  <dt>Área</dt> <dd><%= @property.area %></dd>
-  <dt>Tipo de propriedade</dt> <dd><%= @property.property_type.title %></dd>
-  <dt>Quartos</dt> <dd><%= @property.rooms %></dd>
-  <dt>Ocupação maxima</dt> <dd><%= @property.maximum_occupancy %></dd>
-  <dt>Dias mínimos para alugar</dt> <dd><%= @property.minimum_rent_days %></dd>
-  <dt>Dias máximos para alugar</dt> <dd><%= @property.maximum_rent_days %></dd>
-  <dt>Preço da diaria</dt> <dd><%= t number_to_currency(@property.daily_rate) %></dd>
-  <dt>Regras de uso</dt> <dd><%= @property.usage_rules %></dd>
-</dl>
+<%= render partial: 'shared/property_details', locals: {property: @property} %>
 
+
+<%= link_to 'Enviar Proposta', new_property_proposal_path(@property) %>
 <%= link_to 'Voltar', root_path, class: 'btn btn-defalt' %>

@@ -10,7 +10,6 @@ feature 'owner register a new property' do
     visit root_path
     click_on 'Anunciar uma propriedade'
 
-    expect(current_path).to eq(new_property_path)
     fill_in 'Título', with: 'Sitío do picapau amarelo'
     select 'Campinas - São Paulo', from: 'Localização'
     fill_in 'Área (m²)', with: 200

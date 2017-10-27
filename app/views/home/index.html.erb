@@ -1,1 +1,16 @@
+<h1>Aluga temporada</h1>
+<p class="lead">O maior site de aluguel do Grajáu</p>
+
 <%= link_to 'Anunciar uma propriedade', new_property_path, class: 'btn btn-default' %>
+
+<hr>
+
+<% if @properties.any? %>
+  <div class="row">
+    <% @properties.each do |property| %>
+      <div class="col-md-4 col-sm-12 col-lg-4">
+        <%= render partial: 'shared/property_details', locals: {property: property, small: true} %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

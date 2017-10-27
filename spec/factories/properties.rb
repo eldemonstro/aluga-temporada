@@ -18,11 +18,18 @@
 #  updated_at        :datetime         not null
 #
 
-class Property < ApplicationRecord
-  belongs_to :location
-  belongs_to :property_type
-  has_many :proposals
-
-  validates :title, :maximum_occupancy, :maximum_rent_days, :minimum_rent_days,
-            :daily_rate, :description, :usage_rules, presence: true
+FactoryBot.define do
+  factory :property do
+    title 'Sítio do picapau amarelo'
+    location
+    area 200
+    property_type
+    rooms 6
+    maximum_occupancy 30
+    minimum_rent_days 1
+    maximum_rent_days 20
+    daily_rate 200
+    description 'Sítio para passar as férias'
+    usage_rules 'Não pode cachorro'
+  end
 end

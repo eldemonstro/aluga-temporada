@@ -1,7 +1,12 @@
 pt-BR:
+  helpers:
+    submit:
+      proposal:
+        create: "Enviar %{model}"
   activerecord:
       models:
         property: "Propriedade"
+        proposal: "Proposta"
       attributes:
         property:
           title: "Título"
@@ -15,3 +20,12 @@ pt-BR:
           daily_rate: "Valor padrão para a díaria"
           description: "Descrição"
           usage_rules: "Regras de uso"
+        proposal:
+          user_name: "Nome"
+          email: "Email"
+          start_date: "Data de início"
+          end_date: "Data de fim"
+          purpose: "Propósito da locação"
+          total_guests: "Quantidade de pessoas"
+          agree_with_rules: "Aceito as regras"
+          submit: "Enviar Proposta"

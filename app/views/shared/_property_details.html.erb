@@ -1,0 +1,20 @@
+<% if local_assigns[:small] %>
+  <h3><%= link_to property.title, property %></h3>
+  <p><%= property.description %></p>
+<% else %>
+  <h1><%= link_to property.title, property %></h1>
+  <p class="lead"><%= property.description %></p>
+<% end %>
+<dl>
+  <dt>Localização</dt> <dd><%= property.location.city_with_state %></dd>
+  <dt>Área</dt> <dd><%= property.area %></dd>
+  <dt>Tipo de propriedade</dt> <dd><%= property.property_type.title %></dd>
+  <dt>Preço da diaria</dt> <dd><%= t number_to_currency(property.daily_rate) %></dd>
+  <% if !local_assigns[:small] %>
+    <dt>Quartos</dt> <dd><%= property.rooms %></dd>
+    <dt>Ocupação maxima</dt> <dd><%= property.maximum_occupancy %></dd>
+    <dt>Dias mínimos para alugar</dt> <dd><%= property.minimum_rent_days %></dd>
+    <dt>Dias máximos para alugar</dt> <dd><%= property.maximum_rent_days %></dd>
+    <dt>Regras de uso</dt> <dd><%= property.usage_rules %></dd>
+  <% end %>
+</dl>
