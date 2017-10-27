@@ -1,0 +1,131 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/fabricio/workspace/aluga-temporada/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/models/location.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/models/property.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/models/property_type.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/controllers/properties_controller.rb": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/fabricio/workspace/aluga-temporada/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1509128254
+  }
+}

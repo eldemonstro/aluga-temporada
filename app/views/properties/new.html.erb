@@ -1,26 +1,62 @@
-<%= form_for(@property) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :location_id %>
-  <%= f.collection_select(:location_id, @locations, :id, :city_with_state) %>
-  <%= f.label :area %>
-  <%= f.number_field :area %>
-  <%= f.label :property_type_id %>
-  <%= f.collection_select(:property_type_id, @property_types, :id, :title) %>
-  <%= f.label :rooms %>
-  <%= f.number_field :rooms %>
-  <%= f.label :maximum_occupancy %>
-  <%= f.number_field :maximum_occupancy %>
-  <%= f.label :maximum_rent_days %>
-  <%= f.number_field :maximum_rent_days %>
-  <%= f.label :minimum_rent_days %>
-  <%= f.number_field :minimum_rent_days %>
-  <%= f.label :daily_rate %>
-  <%= f.number_field :daily_rate %>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <%= f.label :usage_rules %>
-  <%= f.text_area :usage_rules %>
+<h1>Anunciar uma propriedade</h1>
 
-  <%= f.submit %>
+<% if @property.errors.any? %>
+  <% @property.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= form_for(@property) do |f| %>
+  <legend>Formulário para anunciar uma propriedade</legend>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location_id %>
+    <%= f.collection_select :location_id, @locations, :id, :city_with_state, {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :area %>
+    <%= f.number_field :area, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :property_type_id %>
+    <%= f.collection_select :property_type_id, @property_types, :id, :title, {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rooms %>
+    <%= f.number_field :rooms, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :maximum_occupancy %>
+    <%= f.number_field :maximum_occupancy, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :maximum_rent_days %>
+    <%= f.number_field :maximum_rent_days, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :minimum_rent_days %>
+    <%= f.number_field :minimum_rent_days, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :daily_rate %>
+    <div class="input-group">
+      <div class="input-group-addon">R$</div>
+      <%= f.number_field :daily_rate, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :usage_rules %>
+    <%= f.text_area :usage_rules, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
 <% end %>

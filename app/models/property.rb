@@ -21,4 +21,7 @@
 class Property < ApplicationRecord
   belongs_to :location
   belongs_to :property_type
+
+  validates :title, :maximum_occupancy, :maximum_rent_days, :minimum_rent_days,
+            :daily_rate, :description, :usage_rules, presence: true
 end
