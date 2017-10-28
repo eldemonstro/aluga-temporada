@@ -1,4 +1,7 @@
-# README
+# Aluga Temporada
+
+[![BuildStatus](https://secure.travis-ci.org/eldemonstro/aluga-temporada.svg?branch=master)](http://travis-ci.org/eldemonstro/aluga-temporada)
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
