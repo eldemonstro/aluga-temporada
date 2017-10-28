@@ -1,0 +1,11 @@
+<% if flash[:message] %>
+  <div class="alert alert-danger"><%= flash[:message] %></div>
+<% end %>
+
+<%= form_tag(authenticate_owners_path, method: "post") do %>
+  <%= label_tag(:email, 'Email') %>
+  <%= text_field_tag(:email) %>
+  <%= label_tag(:password, 'Senha') %>
+  <%= text_field_tag(:password) %>
+  <%= submit_tag("Entrar") %>
+<% end %>
